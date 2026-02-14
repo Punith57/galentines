@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heyyyyy</title>
+    <link rel="stylesheet" href="last.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="gallery">
+            <img src="pic1.jpeg" class="photo p1" onclick="focusImage(this)">
+            <img src="pic2.jpeg" class="photo p2" onclick="focusImage(this)">
+        </div>
+        <div class="message">
+            <p>Happy Valentine’s Day!!!!🌹 You make my world brighter just by being in it🫠🤌🪷</p>
+        </div>
+    </div>
+
+    <script>
+        function focusImage(el) {
+            // Remove active class from all other photos
+            document.querySelectorAll('.photo').forEach(photo => {
+                if (photo !== el) photo.classList.remove('active');
+            });
+
+            // Toggle active on clicked element
+            el.classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>
